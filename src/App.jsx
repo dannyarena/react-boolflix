@@ -1,10 +1,13 @@
 import { useState } from 'react'
 import './App.css'
+import SearchBar from './SearchBar'
 
 function App() {
 
   return (
-   <div></div>
+   <div>
+    <SearchBar />
+   </div>
   )
 }
 
