@@ -29,7 +29,12 @@ export default function SearchBar() {
             {/* risultati in pagina */}
             <ul>
                 {movies.map(movie => (
-                    <li key={movie.id}>{movie.title}</li>
+                    <li key={movie.id}>
+                        <p><strong>Titolo:</strong>{movie.title}</p>
+                        <p><strong>Titolo originale:</strong>{movie.original_title}</p>
+                        <p><strong>Lingua:</strong>{movie.original_language}</p>
+                        <p><strong>Voto:</strong>{movie.vote_average}</p>
+                    </li>
                 ))}
             </ul>
         </div>
