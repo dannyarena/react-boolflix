@@ -25,6 +25,13 @@ export default function SearchBar() {
             onChange={(event) => setQuery(event.target.value)}/>
             {/* bottone cerca */}
             <button onClick={handleSearch}>Cerca</button>
+
+            {/* risultati in pagina */}
+            <ul>
+                {movies.map(movie => (
+                    <li key={movie.id}>{movie.title}</li>
+                ))}
+            </ul>
         </div>
     );
 }
