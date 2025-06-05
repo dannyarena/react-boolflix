@@ -32,7 +32,9 @@ export default function SearchBar() {
                     <li key={movie.id}>
                         <p><strong>Titolo:</strong>{movie.title}</p>
                         <p><strong>Titolo originale:</strong>{movie.original_title}</p>
-                        <p><strong>Lingua:</strong>{movie.original_language}</p>
+                        <p><strong>Lingua:</strong><img src={`https://flagcdn.com/16x12/${movie.original_language}.png`} alt={movie.original_language}  style={{marginLeft: '5px'}}
+                        />
+                        </p>
                         <p><strong>Voto:</strong>{movie.vote_average}</p>
                     </li>
                 ))}
