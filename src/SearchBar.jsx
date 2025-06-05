@@ -15,6 +15,7 @@ export default function SearchBar() {
                 console.error("Errore nella ricezione dei dati:", error);
             });
         }
+        const [movies, setMovies] = useState([]);
     return (
         //input di testo
         <div>
