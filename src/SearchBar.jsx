@@ -9,7 +9,7 @@ export default function SearchBar() {
             const url = `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=${query}&language=it-IT`;
             axios.get(url)
             .then(response => {
-                console.log("Risultati film", response.data.results);
+                setMovies(response.data.results);
             })
             .catch(error => {
                 console.error("Errore nella ricezione dei dati:", error);
