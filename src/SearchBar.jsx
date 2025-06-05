@@ -6,7 +6,8 @@ export default function SearchBar() {
 
         function handleSearch() {
             const API_KEY = `e5dd1dbd92245a50236e0af84095f35a`;
-            const url = `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=${query}&language=it-IT`;
+            const movieURL = `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=${query}&language=it-IT`;
+            const tvURL = `https://api.themoviedb.org/3/search/tv?api_key=${API_KEY}&query=${query}&language=it-IT`;
             axios.get(url)
             .then(response => {
                 setMovies(response.data.results);
