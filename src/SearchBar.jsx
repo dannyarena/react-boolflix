@@ -1,10 +1,19 @@
 import { useState } from "react";
+import axios from "axios";
 
 export default function SearchBar() {
     const [query, setQuery] = useState ('');
 
         function handleSearch() {
-            console.log(`Hai cercato: ${query}`);
+            const API_KEY = `e5dd1dbd92245a50236e0af84095f35a`;
+            const url = `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=${query}&language=it-IT`;
+            axios.get(url)
+            .then(response => {
+                console.log("Risultati film", response.data.results);
+            })
+            .catch(error => {
+                console.error("Errore nella ricezione dei dati:", error);
+            });
         }
     return (
         //input di testo
