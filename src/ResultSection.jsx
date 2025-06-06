@@ -1,5 +1,6 @@
 import { useMedia } from "./context/MediaContext";
 
+
 export default function ResultSection() {
     const { movies } = useMedia();
     
@@ -9,6 +10,9 @@ export default function ResultSection() {
             <ul>
                 {movies.map(movie => (
                     <li key={movie.id}>
+                        {movie.poster_path && (
+                            <img src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`}
+                             alt= {movie.title || movie.name} /> )}
                         <p><strong>Titolo:</strong>{movie.title || movie.name}</p>
                         <p><strong>Titolo originale:</strong>{movie.original_title || movie.original_name}</p>
                         <p><strong>Lingua:</strong>
