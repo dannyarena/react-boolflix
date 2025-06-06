@@ -18,7 +18,8 @@ export default function ResultSection() {
                         <p><strong>Lingua:</strong>
                             <img src={`https://flagcdn.com/16x12/${movie.original_language}.png`} alt={movie.original_language}  style={{marginLeft: '5px'}} />
                         </p>
-                        <p><strong>Voto:</strong>{movie.vote_average}</p>
+                        <p><strong>Voto:</strong>{" "}
+                        {"⭐️".repeat(Math.ceil(movie.vote_average / 2))} </p>
                     </li>
                 ))}
             </ul>
